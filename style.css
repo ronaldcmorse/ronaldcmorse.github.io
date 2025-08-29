@@ -1,9 +1,9 @@
 *{box-sizing:border-box}
 :root{
   --ink:#0f172a;
-  --muted:#5a6872;
-  --brand:#0f4c81;   /* used for links */
-  --bg:#b6c0cc;      /* darker neutral background */
+  --muted:#3b4750;     /* darken for higher contrast */
+  --brand:#0f4c81;     /* link color */
+  --bg:#b6c0cc;        /* darker neutral background */
   --card:#ffffff;
   --border:#bbc7d4;
 }
@@ -24,10 +24,10 @@ a{color:var(--brand);text-decoration:none}
 .intro{display:flex;align-items:center;gap:1rem;padding:1rem 0 0}
 .avatar{width:88px;height:88px;object-fit:cover;border-radius:50%;border:2px solid #fff;
   box-shadow:0 6px 18px rgba(2,12,27,.10);background:#fff}
-.intro-text h1{margin:0 0 .25rem 0;font-size:1.9rem;font-weight:800;letter-spacing:.2px}
-.tag{margin:0;color:var(--muted)}
+.intro-text h1{margin:0 0 .2rem 0;font-size:1.95rem;font-weight:800;letter-spacing:.2px}
+.tag{margin:0;color:var(--muted);font-weight:600;font-size:1.05rem;letter-spacing:.15px}
 
-/* Buttons (no subtext) */
+/* Buttons */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.25rem 0}
 .card{
   display:flex;align-items:center;justify-content:center;min-height:60px;
@@ -58,3 +58,9 @@ a{color:var(--brand);text-decoration:none}
 .site-footer .copyright{display:block;color:#7f8b94;font-size:.8rem;opacity:.85}
 .site-footer .credit{display:block;margin-top:.2rem;color:#8c98a1;font-size:.75rem;opacity:.75}
 .site-footer a{color:#6c879b}
+
+/* Mobile tweaks */
+@media (max-width:520px){
+  .intro-text h1{font-size:1.7rem}
+  .tag{font-size:1rem}
+}

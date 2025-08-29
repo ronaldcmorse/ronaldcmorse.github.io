@@ -22,9 +22,15 @@
 
   <main class="wrap">
     <section class="cards">
-      <a class="card" href="/content/Ronald_C_Morse_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-      <a class="card" href="/content/Ronald_C_Morse_Portfolio.pdf" target="_blank" rel="noopener">Highlights Portfolio (PDF)</a>
-      <a class="card" href="https://www.linkedin.com/in/ronald-c-morse" target="_blank" rel="noopener">LinkedIn Profile</a>
+      <a class="card" href="/content/Ronald_C_Morse_Portfolio.pdf" target="_blank" rel="noopener" aria-label="Open Highlights Portfolio PDF">
+        Highlights Portfolio (PDF)
+      </a>
+      <a class="card" href="/content/Ronald_C_Morse_Resume.pdf" target="_blank" rel="noopener" aria-label="Download resume PDF">
+        Resume (PDF)
+      </a>
+      <a class="card" href="https://www.linkedin.com/in/ronald-c-morse" target="_blank" rel="noopener" aria-label="View LinkedIn profile">
+        LinkedIn Profile
+      </a>
     </section>
 
     <section class="details">
@@ -79,7 +85,7 @@
   <script>
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
-    // Click-to-reveal email (keeps raw address out of HTML source)
+    // Click-to-reveal email
     (function(){
       const u = "hello", d = "ronaldcmorse.com";
       const btn = document.getElementById("revealEmail");
