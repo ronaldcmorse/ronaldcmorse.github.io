@@ -15,7 +15,7 @@ a{color:var(--brand);text-decoration:none}
 /* Skyline banner (subtle) */
 .hero{
   height:104px;
-  background:url('assets/skyline.jpg') left center / cover no-repeat;
+  background:url('skyline.jpg') left center / cover no-repeat;
   filter:saturate(.9) contrast(.96) brightness(.94);
   border-bottom:1px solid var(--border);
 }
