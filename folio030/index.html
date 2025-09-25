@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ronald C. Morse</title>
-  <meta name="description" content="Operations & Executive Support Leader based in the New York Metro area. Resume, LinkedIn, and highlights portfolio." />
+  <meta name="description" content="Operations & Executive Support Leader based in the New York Metro area. Resume, LinkedIn, video intro, and highlights portfolio." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Slim skyline banner (left-aligned), no overlay text -->
+  <!-- Slim skyline banner -->
   <header class="hero" role="img" aria-label="Stamford skyline"></header>
 
   <!-- Intro block -->
@@ -21,18 +21,36 @@
   </section>
 
   <main class="wrap">
+    <!-- Video intro block -->
+    <section class="video-intro details">
+      <h2>60-Second Video Intro</h2>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 4px 14px rgba(2,12,27,.08);">
+        <iframe src="https://player.vimeo.com/video/1121963741"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        </iframe>
+      </div>
+      <p style="margin-top:.75rem;font-size:.95rem;color:#3b4750;">
+        Quick overview of who I am and how I help teams scale operations, facilities, and technology.
+      </p>
+    </section>
+
+    <!-- Resource cards -->
     <section class="cards">
-      <a class="card" href="Ronald_C_Morse_Portfolio.pdf" target="_blank" rel="noopener" aria-label="Open Highlights Portfolio PDF">
+      <a class="card" href="Ronald_C_Morse_Portfolio.pdf" target="_blank" rel="noopener">
         Highlights Portfolio (PDF)
       </a>
-      <a class="card" href="Ronald_C_Morse_Resume.pdf" target="_blank" rel="noopener" aria-label="Download resume PDF">
+      <a class="card" href="Ronald_C_Morse_Resume.pdf" target="_blank" rel="noopener">
         Resume (PDF)
       </a>
-      <a class="card" href="https://www.linkedin.com/in/ronald-c-morse" target="_blank" rel="noopener" aria-label="View LinkedIn profile">
+      <a class="card" href="https://www.linkedin.com/in/ronald-c-morse" target="_blank" rel="noopener">
         LinkedIn Profile
       </a>
     </section>
 
+    <!-- Details section -->
     <section class="details">
       <p>
         Operations, facilities, and technology leader who turns ambiguity into clear plans and flawless execution.
@@ -72,20 +90,12 @@
   <footer class="site-footer">
     <small class="copyright">© <span id="y"></span> Ronald C. Morse</small>
     <small class="credit">
-      Skyline photo:
-      <a href="https://commons.wikimedia.org/wiki/File:Stamford_Connecticut_Skyline_Aug_2017.jpg" target="_blank" rel="noopener">
-        “Stamford Connecticut Skyline (Aug 2017)”
-      </a>
-      by <a href="https://commons.wikimedia.org/wiki/User:John9474" target="_blank" rel="noopener">John9474</a>,
-      used under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
-      Changes: cropped and toned for header.
+      Skyline photo attribution as before
     </small>
   </footer>
 
   <script>
-    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
-    // Click-to-reveal email
     (function(){
       const u = "hello", d = "ronaldcmorse.com";
       const btn = document.getElementById("revealEmail");
