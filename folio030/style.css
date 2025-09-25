@@ -1,9 +1,9 @@
 *{box-sizing:border-box}
 :root{
   --ink:#0f172a;
-  --muted:#3b4750;     /* darken for higher contrast */
-  --brand:#0f4c81;     /* link color */
-  --bg:#b6c0cc;        /* darker neutral background */
+  --muted:#3b4750;
+  --brand:#0f4c81;
+  --bg:#b6c0cc;
   --card:#ffffff;
   --border:#bbc7d4;
 }
@@ -12,10 +12,10 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
 a{color:var(--brand);text-decoration:none}
 .wrap{max-width:980px;margin:0 auto;padding:0 1.25rem}
 
-/* Skyline banner (subtle) */
+/* Skyline banner */
 .hero{
   height:104px;
-  background:url('skyline.jpg') left center / cover no-repeat;
+  background:url('/skyline.jpg') left center / cover no-repeat;
   filter:saturate(.9) contrast(.96) brightness(.94);
   border-bottom:1px solid var(--border);
 }
@@ -37,12 +37,23 @@ a{color:var(--brand);text-decoration:none}
 }
 .card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(2,12,27,.12);border-color:#aebfd0}
 
-/* Details */
-.details{background:#ffffff;border:1px solid #e1eaf1;border-radius:18px;padding:1.1rem 1.25rem;margin:1rem 0 2rem;
+/* Details card */
+.details{background:#ffffff;border:1px solid #e1eaf1;border-radius:18px;padding:1rem 1.1rem;margin:1rem 0 2rem;
   box-shadow:0 4px 14px rgba(2,12,27,.06)}
 .details h3{margin:.75rem 0 .25rem;font-size:.95rem;color:#18384d;letter-spacing:.2px}
 .details ul.tight{margin:.25rem 0 .75rem 1.1rem;padding:0}
 .details ul.tight li{margin:.15rem 0}
+
+/* Video card */
+.video-intro h2{margin:0 0 .4rem}
+.video-frame{max-width:720px;margin:0 auto}
+.video-aspect{position:relative;width:100%;padding-top:56.25%;overflow:hidden;background:transparent;border-radius:12px}
+.video-aspect iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block;border-radius:12px}
+
+/* Mobile: full width */
+@media (max-width: 900px){
+  .video-frame{max-width:100%}
+}
 
 /* CTA */
 .cta{margin-top:.75rem}
@@ -53,7 +64,7 @@ a{color:var(--brand);text-decoration:none}
 .btn.small:hover{box-shadow:0 6px 16px rgba(2,12,27,.08);transform:translateY(-1px)}
 .email-slot a{font-weight:600}
 
-/* Footer (subtle) */
+/* Footer */
 .site-footer{padding:2rem 1.25rem;text-align:center}
 .site-footer .copyright{display:block;color:#7f8b94;font-size:.8rem;opacity:.85}
 .site-footer .credit{display:block;margin-top:.2rem;color:#8c98a1;font-size:.75rem;opacity:.75}
