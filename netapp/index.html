@@ -11,13 +11,36 @@
       text-align: center;
       margin-top: 0.5em;
     }
+    .video-frame {
+      max-width: 720px; /* make video smaller */
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.1);
+      padding: 12px;
+    }
+    .video-aspect {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+    .video-aspect iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
   <header class="hero"></header>
 
   <section class="intro wrap">
-    <img class="avatar" src="./headshot.jpg" alt="Ronald C. Morse headshot" />
+    <a href="https://ronaldcmorse.com/" target="_blank" rel="noopener">
+      <img class="avatar" src="/headshot.jpg" alt="Ronald C. Morse headshot" />
+    </a>
     <div class="intro-text">
       <h1>Ronald C. Morse</h1>
       <p class="tag">Operations & Executive Support Leader · New York Metro (Stamford-based)</p>
