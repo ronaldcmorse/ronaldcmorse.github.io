@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ronald C. Morse</title>
+  <meta name="description" content="Operations & Workplace Experience Leader based in the New York Metro area. Resume, LinkedIn, and highlights portfolio." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Slim skyline banner (left-aligned), no overlay text -->
+  <header class="hero" role="img" aria-label="Stamford skyline"></header>
+
+  <!-- Intro block -->
+  <section class="intro wrap">
+    <img class="avatar" src="headshot.jpg" alt="Ronald C. Morse headshot" />
+    <div class="intro-text">
+      <h1>Ronald C. Morse</h1>
+      <p class="tag">Operations &amp Workplace Experience Leader · New York Metro</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="cards">
+      <a class="card" href="Ronald_C_Morse_Portfolio.pdf" target="_blank" rel="noopener" aria-label="Open Highlights Portfolio PDF">
+        Highlights Portfolio (PDF)
+      </a>
+      <a class="card" href="Ronald_C_Morse_Resume.pdf" target="_blank" rel="noopener" aria-label="Download resume PDF">
+        Resume (PDF)
+      </a>
+      <a class="card" href="https://www.linkedin.com/in/ronald-c-morse" target="_blank" rel="noopener" aria-label="View LinkedIn profile">
+        LinkedIn Profile
+      </a>
+    </section>
+
+    <section class="details">
+      <p>
+        Operations, facilities, and technology leader who turns ambiguity into clear plans and flawless execution.
+        For 20+ years I’ve served as a trusted “right hand” to leadership, equally at ease shaping strategy and rolling up my sleeves.
+        Recent work includes multi-site office buildouts and moves, a RingCentral consolidation across 100+ offices / 400+ users, and calm, zero-downtime transitions.
+      </p>
+
+      <h3>Operations</h3>
+      <ul class="tight">
+        <li>Standardize SOPs, knowledge bases, and onboarding to scale teams.</li>
+        <li>Lead cross-functional projects (IT, finance, legal, vendors) with clear RACI and timelines.</li>
+        <li>Improve reporting &amp; decision support (dashboards, KPIs, workflow clarity).</li>
+      </ul>
+
+      <h3>Facilities &amp; Property</h3>
+      <ul class="tight">
+        <li>Plan &amp; execute office buildouts, moves, and space planning end-to-end.</li>
+        <li>Manage vendors, contracts, and preventive maintenance; ensure life-safety &amp; compliance.</li>
+        <li>Lead capital planning &amp; improvements; streamline procurement &amp; RFPs.</li>
+      </ul>
+
+      <h3>Executive Support &amp; Admin</h3>
+      <ul class="tight">
+        <li>Translate rough concepts into polished decks, briefs, and communications.</li>
+        <li>Anticipate needs, triage issues, and keep sensitive initiatives discreet and on track.</li>
+        <li>Coordinate meetings, training, and back-office workflows to remove friction.</li>
+      </ul>
+
+      <p class="cta">
+        Questions or intros?
+        <button id="revealEmail" class="btn small" type="button">Email me</button>
+        <span id="emailSlot" class="email-slot" aria-live="polite"></span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small class="copyright">© <span id="y"></span> Ronald C. Morse</small>
+    <small class="credit">
+      Skyline photo:
+      <a href="https://commons.wikimedia.org/wiki/File:Stamford_Connecticut_Skyline_Aug_2017.jpg" target="_blank" rel="noopener">
+        “Stamford Connecticut Skyline (Aug 2017)”
+      </a>
+      by <a href="https://commons.wikimedia.org/wiki/User:John9474" target="_blank" rel="noopener">John9474</a>,
+      used under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+      Changes: cropped and toned for header.
+    </small>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Click-to-reveal email
+    (function(){
+      const u = "hello", d = "ronaldcmorse.com";
+      const btn = document.getElementById("revealEmail");
+      if (btn) {
+        btn.addEventListener("click", function(){
+          const e = u + "@" + d;
+          const slot = document.getElementById("emailSlot");
+          slot.innerHTML = ' <a href="mailto:' + e + '">' + e + '</a>';
+          this.remove();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
