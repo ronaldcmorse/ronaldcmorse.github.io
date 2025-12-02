@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ronald C. Morse – Part-Time Roles</title>
+  <meta name="description" content="Customer service–focused professional in Stamford, CT seeking part-time evening or weekend work in retail, hospitality, front desk, event support, or light facilities roles." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Slim skyline banner -->
+  <header class="hero" role="img" aria-label="Stamford skyline"></header>
+
+  <!-- Intro block -->
+  <section class="intro wrap">
+    <img class="avatar" src="headshot.jpg" alt="Ronald C. Morse headshot" />
+    <div class="intro-text">
+      <h1>Ronald C. Morse</h1>
+      <p class="tag">Part-Time Weekend or Evening Roles · Stamford</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Single primary card: part-time resume -->
+    <section class="cards">
+      <a class="card"
+         href="Ronald_C_Morse_Resume.pdf"
+         target="_blank"
+         rel="noopener"
+         aria-label="Open resume PDF">
+        Part-Time Resume (PDF)
+      </a>
+    </section>
+
+    <!-- Very short summary + contact -->
+    <section class="details">
+      <p>
+        Customer service–focused professional with experience in retail, food service, cash handling,
+        front-desk coverage, and light facilities support, backed by two decades of reliable
+        administrative and operations work. I’m seeking part-time evening or weekend shifts where
+        clear communication, dependability, and hands-on help are valued. Local to Stamford and
+        Eastchester, NY, and able to balance this work alongside a full-time day position.
+      </p>
+
+      <p class="cta">
+        Want to connect?
+        <button id="revealEmail" class="btn small" type="button">Email me</button>
+        <span id="emailSlot" class="email-slot" aria-live="polite"></span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small class="copyright">© <span id="y"></span> Ronald C. Morse</small>
+  </footer>
+
+  <script>
+    // Current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Click-to-reveal email (spam-protection)
+    (function () {
+      const u = "rcm";
+      const d = "ronaldcmorse.com";
+      const btn = document.getElementById("revealEmail");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          const e = u + "@" + d;
+          const slot = document.getElementById("emailSlot");
+          slot.innerHTML = ' <a href="mailto:' + e + '">' + e + '</a>';
+          this.remove();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
