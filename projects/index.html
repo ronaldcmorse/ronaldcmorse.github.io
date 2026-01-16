@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ronald C. Morse</title>
   <meta name="description"
-        content="Operations, Principal Support & Asset Stewardship professional based in the New York Metro area. Resume and work samples." />
+        content="Operations, Principal Support & Asset Stewardship professional based in the New York Metro area. Resume and portfolio." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,7 +25,7 @@
 
   <main class="wrap">
 
-    <!-- Summary FIRST (FO-correct ordering) -->
+    <!-- SUMMARY FIRST -->
     <section class="details">
       <p>
         I support principals, owners, and senior leadership with the operational stability and judgment needed to
@@ -33,13 +33,21 @@
         executive and personal support, vendor and budget coordination, and the management of complex transitions and
         buildouts.
       </p>
+
       <p>
         I’m at my best in founder-led or discreet environments where trust, clarity, and quiet problem-solving matter.
         You may download my resume or portfolio below.
       </p>
+
+      <!-- EMAIL REVEAL BUTTON (obfuscated, same as older version) -->
+      <p class="cta" style="margin-top:1rem;">
+        Questions or intros?
+        <button id="revealEmail" class="btn small" type="button">Email me</button>
+        <span id="emailSlot" class="email-slot" aria-live="polite"></span>
+      </p>
     </section>
 
-    <!-- Button row SECOND -->
+    <!-- BUTTON ROW -->
     <section class="cards">
 
       <a class="card"
@@ -58,17 +66,7 @@
         Highlights Portfolio <span class="filetype">(PDF)</span>
       </a>
 
-      <!-- Email button with obfuscation -->
-      <button id="revealEmail" class="card" type="button" aria-label="Reveal email address">
-        Email Me
-      </button>
-
     </section>
-
-    <!-- Email reveal slot -->
-    <div class="wrap" style="margin-top:-0.5rem;">
-      <span id="emailSlot" class="email-slot" aria-live="polite"></span>
-    </div>
 
   </main>
 
@@ -80,8 +78,7 @@
       </a>
       &nbsp;&middot;&nbsp;
       Skyline photo:
-      <a href="https://commons.wikimedia.org/wiki/File:Stamford_Connecticut_Skyline_Aug_2017.jpg"
-         target="_blank" rel="noopener">
+      <a href="https://commons.wikimedia.org/wiki/File:Stamford_Connecticut_Skyline_Aug_2017.jpg" target="_blank" rel="noopener">
         “Stamford Connecticut Skyline (Aug 2017)”
       </a>
       by <a href="https://commons.wikimedia.org/wiki/User:John9474" target="_blank" rel="noopener">John9474</a>,
@@ -89,19 +86,24 @@
     </small>
   </footer>
 
+  <!-- JS: Year + Email Reveal -->
   <script>
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Click-to-reveal email (obfuscated)
-    (function () {
-      const user = "hello", domain = "ronaldcmorse.com";
+    // Click-to-reveal email (same obfuscation as older version)
+    (function(){
+      const u = "hello", d = "ronaldcmorse.com";
       const btn = document.getElementById("revealEmail");
       if (btn) {
-        btn.addEventListener("click", function () {
-          const full = user + "@" + domain;
+        btn.addEventListener("click", function(){
+          const e = u + "@" + d;
           const slot = document.getElementById("emailSlot");
-          slot.innerHTML = '<a href="mailto:' + full + '">' + full + '</a>';
+
+          // Write email next to the text, no card, no width issues
+          slot.innerHTML = ' <a href="mailto:' + e + '">' + e + '</a>';
+
+          // Remove the button
           this.remove();
         });
       }
