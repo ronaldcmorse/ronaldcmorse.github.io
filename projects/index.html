@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ronald C. Morse</title>
+  <meta name="description"
+        content="Operations, Principal Support & Asset Stewardship professional based in the New York Metro area. Resume and work samples." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Skyline banner -->
+  <header class="hero" role="img" aria-label="Stamford skyline"></header>
+
+  <!-- Intro block -->
+  <section class="intro wrap">
+    <img class="avatar" src="headshot.jpg" alt="Ronald C. Morse headshot" />
+    <div class="intro-text">
+      <h1>Ronald C. Morse</h1>
+      <p class="tag">Operations, Principal Support &amp; Asset Stewardship · New York Metro</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <!-- Summary FIRST (FO-correct ordering) -->
+    <section class="details">
+      <p>
+        I support principals, owners, and senior leadership with the operational stability and judgment needed to
+        protect people, property, and long-term projects. My work spans multi-site operations, facilities oversight,
+        executive and personal support, vendor and budget coordination, and the management of complex transitions and
+        buildouts.
+      </p>
+      <p>
+        I’m at my best in founder-led or discreet environments where trust, clarity, and quiet problem-solving matter.
+        You may download my resume or portfolio below.
+      </p>
+    </section>
+
+    <!-- Button row SECOND -->
+    <section class="cards">
+
+      <a class="card"
+         href="Ronald_C_Morse_Resume.pdf"
+         target="_blank"
+         rel="noopener"
+         aria-label="Open Resume PDF">
+        Resume <span class="filetype">(PDF)</span>
+      </a>
+
+      <a class="card"
+         href="Ronald_C_Morse_Portfolio.pdf"
+         target="_blank"
+         rel="noopener"
+         aria-label="Open Highlights Portfolio PDF">
+        Highlights Portfolio <span class="filetype">(PDF)</span>
+      </a>
+
+      <!-- Email button with obfuscation -->
+      <button id="revealEmail" class="card" type="button" aria-label="Reveal email address">
+        Email Me
+      </button>
+
+    </section>
+
+    <!-- Email reveal slot -->
+    <div class="wrap" style="margin-top:-0.5rem;">
+      <span id="emailSlot" class="email-slot" aria-live="polite"></span>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <small class="copyright">© <span id="y"></span> Ronald C. Morse</small>
+    <small class="credit">
+      <a href="https://www.linkedin.com/in/ronald-c-morse" target="_blank" rel="noopener">
+        LinkedIn Profile
+      </a>
+      &nbsp;&middot;&nbsp;
+      Skyline photo:
+      <a href="https://commons.wikimedia.org/wiki/File:Stamford_Connecticut_Skyline_Aug_2017.jpg"
+         target="_blank" rel="noopener">
+        “Stamford Connecticut Skyline (Aug 2017)”
+      </a>
+      by <a href="https://commons.wikimedia.org/wiki/User:John9474" target="_blank" rel="noopener">John9474</a>,
+      used under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+    </small>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Click-to-reveal email (obfuscated)
+    (function () {
+      const user = "hello", domain = "ronaldcmorse.com";
+      const btn = document.getElementById("revealEmail");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          const full = user + "@" + domain;
+          const slot = document.getElementById("emailSlot");
+          slot.innerHTML = '<a href="mailto:' + full + '">' + full + '</a>';
+          this.remove();
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
