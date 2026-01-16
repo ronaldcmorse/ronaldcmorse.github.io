@@ -8,11 +8,11 @@
 
 :root{
   --ink: #0f172a;
-  --muted: #3b4750;        /* Improved contrast */
-  --brand: #0f4c81;        /* Link color */
-  --bg: #b6c0cc;           /* Subtle neutral background */
+  --muted: #3b4750;
+  --brand: #0f4c81;
+  --bg: #b6c0cc;
   --card: #ffffff;
-  --border: #bbc7d4;
+  --border: #d3dde8;        /* softened from previous version */
 }
 
 html, body {
@@ -41,7 +41,7 @@ a {
 ----------------------------------------------------------- */
 
 .hero {
-  height: 104px;
+  height: 92px; /* slightly reduced for better balance */
   background: url('skyline.jpg') left center / cover no-repeat;
   filter: saturate(.9) contrast(.96) brightness(.94);
   border-bottom: 1px solid var(--border);
@@ -56,19 +56,20 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0 0;
+  padding: 1.4rem 0 0;   /* slight increase for breathing room */
 }
 
 .avatar {
-  width: 90px;                 /* refined, understated size */
+  width: 90px;
   height: 90px;
   object-fit: cover;
-  border-radius: 50%;          /* ensures circular crop */
+  border-radius: 50%;
   border: 2px solid #fff;
-  margin-left: 0;              /* improved alignment */
-  margin-right: 1.25rem;
   background: #fff;
   box-shadow: 0 6px 18px rgba(2,12,27,.10);
+  margin-left: 0;
+  margin-right: 1.25rem;
+  margin-top: -2px;      /* subtle upward shift for visual alignment */
 }
 
 .intro-text h1 {
@@ -93,10 +94,10 @@ a {
 
 .details {
   background: #ffffff;
-  border: 1px solid #e1eaf1;
+  border: 1px solid var(--border);  /* softer tone */
   border-radius: 18px;
   padding: 1.1rem 1.25rem;
-  margin: 1rem 0 2.25rem;      /* slightly more space above buttons */
+  margin: 1rem 0 2.25rem;
   box-shadow: 0 4px 14px rgba(2,12,27,.06);
   line-height: 1.55;
 }
@@ -119,7 +120,7 @@ a {
 
 
 /* -----------------------------------------------------------
-   CTA (Email Reveal)
+   CTA (Email Reveal Button)
 ----------------------------------------------------------- */
 
 .cta {
@@ -155,7 +156,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
-  margin: 1.75rem 0 2.5rem;   /* creates elegant spacing from summary */
+  margin: 1.75rem 0 3.2rem;   /* increased spacing above footer */
 }
 
 .card {
@@ -178,7 +179,6 @@ a {
   border-color: #aebfd0;
 }
 
-/* Softer "(PDF)" label */
 .card .filetype {
   font-size: 0.85em;
   opacity: 0.65;
@@ -192,7 +192,7 @@ a {
 ----------------------------------------------------------- */
 
 .site-footer {
-  padding: 2rem 1.25rem;
+  padding: 2.5rem 1.25rem 2rem; /* more room above the footer */
   text-align: center;
 }
 
@@ -205,10 +205,10 @@ a {
 
 .site-footer .credit {
   display: block;
-  margin-top: .2rem;
+  margin-top: .3rem;
   color: #8c98a1;
   font-size: .75rem;
-  opacity: .75;
+  opacity: .74;
 }
 
 .site-footer a {
